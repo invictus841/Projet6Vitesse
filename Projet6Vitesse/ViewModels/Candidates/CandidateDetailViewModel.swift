@@ -34,18 +34,6 @@ class CandidateDetailViewModel: ObservableObject {
         self.editedNote = candidate.note ?? ""
     }
     
-    func toggleFavorite() async {
-        guard isAdmin else { return }
-        
-        do {
-            candidate = try await candidateService.toggleFavorite(candidateId: candidate.id)
-            errorMessage = nil
-        } catch {
-            print("Debug toggle favorite error: \(error)")
-            errorMessage = "Failed to toggle favorite"
-        }
-    }
-    
     func saveChanges() async {
         guard isAdmin else { return }
         
@@ -63,10 +51,22 @@ class CandidateDetailViewModel: ObservableObject {
         
         do {
             candidate = try await candidateService.updateCandidate(updatedCandidate)
-            isEditing = false
             errorMessage = nil
+            isEditing = false
         } catch {
             errorMessage = "Failed to save changes"
+        }
+    }
+    
+    func toggleFavorite() async {
+        guard isAdmin else { return }
+        
+        do {
+            candidate = try await candidateService.toggleFavorite(candidateId: candidate.id)
+            errorMessage = nil
+        } catch {
+            print("Debug toggle favorite error: \(error)")
+            errorMessage = "Failed to toggle favorite"
         }
     }
 }
