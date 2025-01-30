@@ -18,7 +18,11 @@ class AppStateViewModel: ObservableObject {
     }
     
     func logout() {
-        try? keychainService.deleteToken()
+        do {
+            try keychainService.deleteToken()
+        } catch {
+            print("Erreur lors de la suppression du token : \(error)")
+        }
         isAuthenticated = false
         isAdmin = false
     }
