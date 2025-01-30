@@ -23,10 +23,4 @@ class AppStateViewModel: ObservableObject {
         isAuthenticated = false
         isAdmin = false
     }
-    
-//    func checkAuthStatus() {
-//        if let _ = try? keychainService.getToken() {
-//            isAuthenticated = true
-//        }
-//    }
 }
