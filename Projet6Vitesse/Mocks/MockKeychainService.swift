@@ -5,6 +5,8 @@
 //  Created by Alexandre Talatinian on 30/01/2025.
 //
 
+import Foundation
+
 class MockKeychainService: KeychainServiceProtocol {
     private var token: String?
     
