@@ -7,7 +7,6 @@
 
 import Foundation
 
-@MainActor
 class AppStateViewModel: ObservableObject {
     @Published var isAuthenticated = false
     @Published var isAdmin = false
