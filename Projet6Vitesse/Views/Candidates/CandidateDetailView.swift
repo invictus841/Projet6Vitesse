@@ -47,11 +47,11 @@ struct CandidateDetailView: View {
                         isEditing: viewModel.isEditing
                     )
                     
-                    CustomTextField(
-                        placeholder: "LinkedIn URL",
+                    LinkedInField(
                         label: "LinkedIn",
-                        text: viewModel.isEditing ? $viewModel.editedLinkedinURL : .constant(viewModel.candidate.linkedinURL ?? "Not provided"),
-                        isEditing: viewModel.isEditing
+                        url: viewModel.candidate.linkedinURL ?? "",
+                        isEditing: viewModel.isEditing,
+                        editedText: $viewModel.editedLinkedinURL
                     )
                     
                     CustomTextField(
