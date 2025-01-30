@@ -50,6 +50,38 @@ struct TextFieldModifier: ViewModifier {
     }
 }
 
+struct LinkedInField: View {
+    let label: String
+    let url: String
+    let isEditing: Bool
+    @Binding var editedText: String
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(label)
+                .foregroundColor(.gray)
+                .font(.system(size: 16, weight: .medium))
+            
+            if isEditing {
+                TextField("LinkedIn URL", text: $editedText)
+                    .foregroundStyle(.green)
+                    .modifier(TextFieldModifier())
+            } else {
+                Button {
+                    if let url = URL(string: url), url.scheme != nil {
+                        UIApplication.shared.open(url)
+                    }
+                } label: {
+                    Text(url.isEmpty ? "Not provided" : url)
+                        .foregroundStyle(.blue)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .modifier(TextFieldModifier())
+            }
+        }
+    }
+}
+
 #Preview {
     VStack(spacing: 20) {
         CustomTextField(
@@ -64,6 +96,8 @@ struct TextFieldModifier: ViewModifier {
             text: .constant(""),
             isSecure: true
         )
+        
+        LinkedInField(label: "Test", url: "www.test.com", isEditing: false, editedText: .constant("test"))
     }
     .padding()
 }
