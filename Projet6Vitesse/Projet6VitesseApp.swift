@@ -9,9 +9,22 @@ import SwiftUI
 
 @main
 struct Projet6VitesseApp: App {
+    @StateObject private var appState = AppStateViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                if appState.isAuthenticated {
+                    CandidatesView(
+                        viewModel: CandidatesViewModel(isAdmin: appState.isAdmin),
+                        appState: appState
+                    )
+                } else {
+                    LoginView(
+                        viewModel: LoginViewModel(appState: appState)
+                    )
+                }
+            }
         }
     }
 }

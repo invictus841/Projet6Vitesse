@@ -35,6 +35,10 @@
 		AC20B3F22D4AEDDA00A25ECE /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20B3F12D4AEDDA00A25ECE /* LoginViewModelTests.swift */; };
 		AC20B3F32D4AEEE500A25ECE /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20B3EB2D4AED6D00A25ECE /* MockAuthService.swift */; };
 		AC20B3F42D4AEEED00A25ECE /* MockKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20B3ED2D4AEDAF00A25ECE /* MockKeychainService.swift */; };
+		AC20B3F62D4B646C00A25ECE /* CandidatesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20B3F52D4B646C00A25ECE /* CandidatesViewModelTests.swift */; };
+		AC20B3F82D4B648E00A25ECE /* MockCandidateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20B3F72D4B648E00A25ECE /* MockCandidateService.swift */; };
+		AC20B3FA2D4B661500A25ECE /* CandidateDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20B3F92D4B661500A25ECE /* CandidateDetailViewModelTests.swift */; };
+		AC20B3FC2D4B6DF400A25ECE /* AppStateViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20B3FB2D4B6DF400A25ECE /* AppStateViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,10 @@
 		AC20B3ED2D4AEDAF00A25ECE /* MockKeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockKeychainService.swift; sourceTree = "<group>"; };
 		AC20B3EF2D4AEDC800A25ECE /* RegisterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelTests.swift; sourceTree = "<group>"; };
 		AC20B3F12D4AEDDA00A25ECE /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		AC20B3F52D4B646C00A25ECE /* CandidatesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidatesViewModelTests.swift; sourceTree = "<group>"; };
+		AC20B3F72D4B648E00A25ECE /* MockCandidateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCandidateService.swift; sourceTree = "<group>"; };
+		AC20B3F92D4B661500A25ECE /* CandidateDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateDetailViewModelTests.swift; sourceTree = "<group>"; };
+		AC20B3FB2D4B6DF400A25ECE /* AppStateViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +249,9 @@
 			children = (
 				AC20B3EF2D4AEDC800A25ECE /* RegisterViewModelTests.swift */,
 				AC20B3F12D4AEDDA00A25ECE /* LoginViewModelTests.swift */,
+				AC20B3F52D4B646C00A25ECE /* CandidatesViewModelTests.swift */,
+				AC20B3F92D4B661500A25ECE /* CandidateDetailViewModelTests.swift */,
+				AC20B3FB2D4B6DF400A25ECE /* AppStateViewModelTests.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -250,6 +261,7 @@
 			children = (
 				AC20B3EB2D4AED6D00A25ECE /* MockAuthService.swift */,
 				AC20B3ED2D4AEDAF00A25ECE /* MockKeychainService.swift */,
+				AC20B3F72D4B648E00A25ECE /* MockCandidateService.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -376,6 +388,7 @@
 				AC20B3D62D4AD9E700A25ECE /* CandidatesView.swift in Sources */,
 				AC20B3C62D4AD1FC00A25ECE /* LoginViewModel.swift in Sources */,
 				AC20B3BC2D4AD06F00A25ECE /* User.swift in Sources */,
+				AC20B3F82D4B648E00A25ECE /* MockCandidateService.swift in Sources */,
 				AC20B3D42D4AD98D00A25ECE /* AppStateViewModel.swift in Sources */,
 				AC20B3A42D4AC6F800A25ECE /* ContentView.swift in Sources */,
 				AC20B3BA2D4AD05400A25ECE /* AuthResponse.swift in Sources */,
@@ -391,8 +404,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC20B3FC2D4B6DF400A25ECE /* AppStateViewModelTests.swift in Sources */,
 				AC20B3F22D4AEDDA00A25ECE /* LoginViewModelTests.swift in Sources */,
+				AC20B3FA2D4B661500A25ECE /* CandidateDetailViewModelTests.swift in Sources */,
 				AC20B3F02D4AEDC800A25ECE /* RegisterViewModelTests.swift in Sources */,
+				AC20B3F62D4B646C00A25ECE /* CandidatesViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
